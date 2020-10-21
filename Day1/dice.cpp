@@ -4,8 +4,13 @@
 
 using namespace std;
 
-int rand_0toN1(int n);
-
+// Random 0-to-N1 Function.
+    // Generate a random integer from 0 to N-1, with each
+    // integer an equal probability.
+    //
+int rand_0toN1(int n) {
+    return rand() % n;
+}
 int main()
 {
     int n = 0;
@@ -21,10 +26,6 @@ int main()
     }
     return 0;
     }
-    // Random 0-to-N1 Function.
-    // Generate a random integer from 0 to N-1, with each
-    // integer an equal probability.
-    //
-    int rand_0toN1(int n) {
-        return rand() % n;
-}
+    
+
+    
