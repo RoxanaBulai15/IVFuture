@@ -13,7 +13,7 @@ def dictionary():
     #parcurg lista mare si formez o noua lista doar cu liste ce contin 2 elemente: cheie+valoare
     newlist = []
     for index in range(len(list)):
-        if len(list[index]) == 2:
+        if len(list[index]) >= 2:
             newlist.append(list[index])
     #print(newlist)
 
@@ -21,6 +21,9 @@ def dictionary():
     for i in range(len(newlist)):
         key = newlist[i][0]
         value = newlist[i][1]
+        if len(newlist[i]) > 1:
+            for j in range(2, len(newlist[i])):
+                value = value + ":" +  newlist[i][j]
         dictionar[key] = value
     print("Dictionarul format are urmatoarele key cu valori: ")
     for key, value in dictionar.items():
