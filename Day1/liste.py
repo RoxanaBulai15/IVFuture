@@ -1,29 +1,37 @@
+import os
 from math import *
 
-print("_____________")
+print(20*"_")
 print("!!! Liste !!!")
-print("_____________")
+print(20*"_")
 students = ["Maria", "Matei", "Roxana"]
 note = [10, 9.9, 5]
-print(students[0])
+print("Primul student este: "+ students[0])
 print(students[1:])
 print(students[2:])
-print(students[0:2])
+
+print("A fost adaugat un student in lista: ")
 students.insert(1, "Paul")
 print(students)
+print("A fost sters un student din lista: ")
 students.remove("Roxana")
 print(students)
+print("A fost sters ultimul student din lista: ")
 students.pop()
 print(students)
+print("Sunt adaugati doi studenti si este sortata lista: ")
 students.append("Alina")
 students.append("Kevin")
 students.sort()
 print(students)
+print("Lista cu note este sortata crescator: ")
 note.sort()
 print(note)
+print("Lista cu note este sortata descrescator: ")
 note.reverse()
 print(note)
 students2 = students.copy()
+print("Studentii au fost copiati intr-o lista noua: ")
 print(students2)
 
 coordonate = [(1, 2), (2.4, 3), (1.8, 2)]
@@ -37,9 +45,9 @@ def say_hi():
 
 say_hi()
 
-print("_________________")
+print(20*"_")
 print("!!! DICTIONAR !!!")
-print("_________________")
+print(20*"_")
 exams = {"Paul": 10, "Alina": 7, "Roxana": 9, "Geralt": 10}
 x = exams["Paul"]
 print("Nota studentului este: "+ str(x))
@@ -74,17 +82,17 @@ print("Lungimea dictionarului este: " + str(len(exams)))
 # sterge dictionarul
 del(exams)
 faculty = {}
-for i in range(4):
-    key = input("Introduceti materia: ")
-    faculty[key] = input("Introduceti nota de la examen: ")
-print("Noul dictionar creat este: ")
-for materie, nota in faculty.items():
-  print(materie, nota)
+#for i in range(4):
+  #  key = input("Introduceti materia: ")
+  #  faculty[key] = input("Introduceti nota de la examen: ")
+#print("Noul dictionar creat este: ")
+#for materie, nota in faculty.items():
+ # print(materie, nota)
 
 
-print("____________")
+print(20*"_")
 print("!!! TEMA !!!")
-print("____________")
+print(20*"_")
 
 
 def liste():
@@ -98,8 +106,28 @@ def liste():
     file = open("link.txt", "w+")
 
     file.write(link)
-    # close a file
+    file = open("link.txt", "r")
+    number_of_lines = len(open('link.txt').readlines())
+    print(number_of_lines)
+    a = file.read()
+    print(type(a))
+    nr_cuvinte = 0
+    nr_litere = 0
+    for i in range(len(a)):
+        if a[i] ==" ":
+            nr_cuvinte = nr_cuvinte + 1
+        elif a[i].isalpha() == True:
+            nr_litere = nr_litere +1
+    print("Numarul cuvintelor este: " + str(nr_cuvinte+1))
+    print("Numarul literelor este: " + str(nr_litere))
     file.close()
+
+    # open file for reading
+    f = open('link.txt')
+    # move file cursor to end
+    f.seek(0, os.SEEK_END)
+    # get the current cursor position
+    print('Size of file is', f.tell(), 'bytes')
 
 
 liste()
