@@ -1,0 +1,12 @@
+GET /matomo.js HTTP/1.1
+Host: matomo.imagination.support
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://store-storefront-default.imagination.support/
+Connection: close
+Cookie: __cfduid=d361d353117584c4e4291801bd509dd5f1599728260
+If-Modified-Since: Mon, 20 Jul 2020 06:29:58 GMT
+If-None-Match: "1131c-5aad9a2b5c580-gzip"
+Cache-Control: max-age=0'
