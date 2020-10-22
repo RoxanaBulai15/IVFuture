@@ -1,7 +1,27 @@
-workbook = xlwt.Workbook()
-sheet1 = workbook.add_sheet()
-workbook.save()
+import xlwt
+from xlwt import Workbook
 
+wb = xlwt.Workbook()
+sheet1 = wb.add_sheet("advanced")
+font0 = xlwt.Font()
+font0.name = "Times New Roman"
+font0.colour_index = 2
+font0.bold = True
+
+style1 = xlwt.XFStyle()
+style1.font = font0
+
+style1 = xlwt.easyxf('pattern: pattern solid, fore_colour yellow;')
+
+first_col = sheet1.col(0)
+first_col.width = 256 * 20  # 20 characters wide (-ish)
+
+
+second_col = sheet1.col(1)
+second_col.width = 256 * 70
+
+sheet1.write(0, 0, "KEY", style1)
+sheet1.write(0, 1, "VALUE", style1)
 
 def dictionary():
     file = open("advanced.txt", "r")
@@ -31,11 +51,19 @@ def dictionary():
                 value = value + ":" + newlist[i][j]
         dictionar[key] = value
     print("Dictionarul format are urmatoarele key cu valori: ")
+    row = 1
     for key, value in dictionar.items():
-        print("Key: " + key + "," + "Value: " + value)
+        column = 0
+        sheet1.write(row,column, key)
+        column = column + 1
+        sheet1.write(row, column, value)
+        row = row +1
+
+    wb.save("advanced.xlsx")
 
 
 dictionary()
+
 
 #file1 = open('advanced.txt', 'r')
 #lines = file1.readlines()
