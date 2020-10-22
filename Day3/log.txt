@@ -1,0 +1,24 @@
+
+18:19:32,380 root WARNING Aceasta lista are un singur element! - 
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Lista are 2 sau mai multe elemente.
+18:19:32,381 root INFO Key: Host , Value:  matomo.imagination.support
+18:19:32,381 root INFO Key: User-Agent , Value:  Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+18:19:32,381 root INFO Key: Accept , Value:  */*
+18:19:32,381 root INFO Key: Accept-Language , Value:  en-US,en;q=0.5
+18:19:32,381 root INFO Key: Accept-Encoding , Value:  gzip, deflate
+18:19:32,381 root INFO Key: Referer , Value:  https://store-storefront-default.imagination.support/
+18:19:32,382 root INFO Key: Connection , Value:  close
+18:19:32,382 root INFO Key: Cookie , Value:  __cfduid=d361d353117584c4e4291801bd509dd5f1599728260
+18:19:32,382 root INFO Key: If-Modified-Since , Value:  Mon, 20 Jul 2020 06:29:58 GMT
+18:19:32,382 root INFO Key: If-None-Match , Value:  "1131c-5aad9a2b5c580-gzip"
+18:19:32,382 root INFO Key: Cache-Control , Value:  max-age=0'
