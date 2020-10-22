@@ -2,9 +2,14 @@ Experimental: Books/Links about this repository
 
 
 Links:
-
-
+	Day3 - Librarie XLWT( https://www.youtube.com/watch?v=FbWnuO7GGBQ , https://www.youtube.com/watch?v=xRvQEHr3L2o&t=322s )
+	Day2 - 
 
 
 Books:
 	https://goalkicker.com/
+	Day3 - Extensia Chrome-Excel(https://www.offidocs.com/index.php/productivity-chrome-firefox-extensions/excel-xls-editor-web-browser-            extension#:~:text=Web%20extension%20available%20in%20Chrome%20WebStore%20and%20FireFox,also%20handles%20the%20standard%20Open%20Office%20format%20ODS.)
+	    - Librarie XLWT( https://xlwt.readthedocs.io/en/latest/ , https://buxty.com/b/2011/10/widths-heights-with-xlwt-python/ , https://xlwt.readthedocs.io/en/latest/api.html
+	    
+	    - Logging(https://docs.python.org/3/howto/logging.html)
+	Day2 -
