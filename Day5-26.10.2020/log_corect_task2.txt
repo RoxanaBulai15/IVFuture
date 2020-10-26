@@ -1,0 +1,85 @@
+11:31:42,225 root INFO Fisierul xml a fost citit!
+11:31:42,227 root INFO Fisierul xml a fost citit!
+11:31:42,227 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,227 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,227 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,227 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,227 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,227 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,227 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,227 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,227 root INFO Cuvantul a fost gasit si textul este decodat: 
+11:31:42,227 root INFO b'Bravo ! Ai facut o treaba buna !'
+11:31:42,228 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,228 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,228 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,228 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,228 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,230 root INFO Fisierul xml a fost citit!
+11:31:42,231 root INFO Fisierul xml a fost citit!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root INFO Cuvantul a fost gasit si textul este decodat: 
+11:31:42,232 root INFO b'Bravo ! Ai facut o treaba buna !'
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,232 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,236 root INFO Fisierul xml a fost citit!
+11:31:42,237 root INFO Fisierul xml a fost citit!
+11:31:42,237 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,237 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,237 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,238 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,238 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,238 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,238 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,238 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,238 root INFO Cuvantul a fost gasit si textul este decodat: 
+11:31:42,238 root INFO b'Bravo ! Ai facut o treaba buna !'
+11:31:42,238 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,238 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,238 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,239 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,239 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,241 root INFO Fisierul xml a fost citit!
+11:31:42,243 root INFO Fisierul xml a fost citit!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root INFO Cuvantul a fost gasit si textul este decodat: 
+11:31:42,244 root INFO b'Bravo ! Ai facut o treaba buna !'
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,244 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,245 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,245 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,246 root INFO Fisierul xml a fost citit!
+11:31:42,247 root INFO Fisierul xml a fost citit!
+11:31:42,247 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,247 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root INFO Cuvantul a fost gasit si textul este decodat: 
+11:31:42,248 root INFO b'Bravo ! Ai facut o treaba buna !'
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
+11:31:42,248 root WARNING Acesta nu este cuvantul cautat!!!
