@@ -8,6 +8,7 @@ Links:
 
 Books:
 	https://goalkicker.com/
+	Day6 - OpenCV(https://docs.opencv.org/master/d2/de6/tutorial_py_setup_in_ubuntu.html)
 	Day3 - Extensia Chrome-Excel(https://www.offidocs.com/index.php/productivity-chrome-firefox-extensions/excel-xls-editor-web-browser-            extension#:~:text=Web%20extension%20available%20in%20Chrome%20WebStore%20and%20FireFox,also%20handles%20the%20standard%20Open%20Office%20format%20ODS.)
 	    - Librarie XLWT( https://xlwt.readthedocs.io/en/latest/ , https://buxty.com/b/2011/10/widths-heights-with-xlwt-python/ , https://xlwt.readthedocs.io/en/latest/api.html
 	    
