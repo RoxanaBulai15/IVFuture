@@ -30,7 +30,6 @@ for face in faces:
     #plt.subplot(122), plt.imshow(img), plt.title('Blurred')
     #plt.xticks([]), plt.yticks([])
     #plt.show()
-
 cv2.imshow('img', img)
 cv2.waitKey(0)
 
