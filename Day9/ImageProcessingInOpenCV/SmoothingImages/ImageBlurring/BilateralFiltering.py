@@ -2,7 +2,8 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 
 
-img = cv.imread('/opencv/doc/images/opticalfb.jpg')
+#img = cv.imread('/opencv/doc/images/opticalfb.jpg')
+img= cv.imread('./opticalfb.jpb1')
 blur = cv.bilateralFilter(img,9,75,75)
 
 plt.subplot(121),plt.imshow(img),plt.title('Original')
