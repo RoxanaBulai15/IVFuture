@@ -19,7 +19,7 @@ c = tf.Variable(1.0, name='c')
 
 @tf.function
 def multiply_fn(a, b):
-  return tf.matmul(a, b)
+  return tf.multiply(a, b)
 
 def add_fn(a, b):
   return tf.add(a, b)
