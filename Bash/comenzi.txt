@@ -29,3 +29,14 @@ sudo fdsik /dev/sda = prelucrari pe partitii
 	command w = salvare modificari !!!
 sudo mkfs.ext4/dev/sda5 = formatare fisier cu ext4
 sync
+
+
+
+!!! Adaugare fisier git !!! (ptr comenzi.txt) 
+
+ i) modific in fisier 
+ ii) git add Bash/
+ iii) git status(verific daca fisierul Bash/ nu mai e cu rosu)
+ iv) git commit (numele commit-ului)
+ v)git push origin main
+
