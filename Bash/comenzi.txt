@@ -37,6 +37,6 @@ sync
  i) modific in fisier 
  ii) git add Bash/
  iii) git status(verific daca fisierul Bash/ nu mai e cu rosu)
- iv) git commit (numele commit-ului)
+ iv) git commit (numele commit-ului,control X, Y, enter)
  v)git push origin main
 
