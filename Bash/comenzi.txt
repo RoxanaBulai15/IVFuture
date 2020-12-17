@@ -1,0 +1,42 @@
+ls = afiseaza toate fisierele
+ls -l
+	w->write
+	r->read
+	x->execute
+	!!! chmod = schimare permisiune 
+
+pwd = directorul unde ne aflam
+cd dir = schimbare director
+cd .. = cu un director in urma...
+cd /
+cd ~
+cd -
+mkdir = creare director nou
+rm -r dir = tergere director
+
+touch file = creare fisier
+rm file = stergere fisier
+date = data curenta
+
+lsblk = detalii despre fisiere(in afara de ram disk)
+sudo fdik - l = afiseaza toate partitiile
+sudo fdsik /dev/sda = prelucrari pe partitii
+	command p = afisare partitii
+	command d = stergere partitie
+	command n = creare partitie
+	command q = iesire fara salvare
+	command m = lista cu toate comenzile disponibile
+	command w = salvare modificari !!!
+sudo mkfs.ext4/dev/sda5 = formatare fisier cu ext4
+sync
+
+
+
+!!! Adaugare fisier git !!! (ptr comenzi.txt) 
+
+ i) modific in fisier 
+ ii) git add Bash/
+ iii) git status(verific daca fisierul Bash/ nu mai e cu rosu)
+ iv) git commit (numele commit-ului,control X, Y, enter)
+ v)git push origin main
+
