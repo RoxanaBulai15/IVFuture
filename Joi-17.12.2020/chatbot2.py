@@ -11,41 +11,28 @@ class ChatBot:
     def check_answer(self):
         ok = 0
         while ok == 0:
+            gasit = 0
             for p in self.data['chatbot']:
-                gasit = 0
                 tagg = 'noanswer'
-
                 if p['tag'] != 'noanswer':
                     for i in p['patterns']:
                         if i == self.userAnswer:
                             gasit = 1
-                            tagg = p['tag']
+                            tagg = p['tag']  # greeting or good
+                            if tagg == 'greeting':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                self.userAnswer = input("User: ")
+                            if tagg == 'good':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                ok = 1
                         if gasit == 1:
                             break
-                else:
-                    print("ChatBot: " + random.choice(p['responses']))
-                    self.userAnswer = input("User: ")
-
-                if tagg == 'greeting':
-                    print("ChatBot: " + random.choice(p['responses']))
-                    self.userAnswer = input("User: ")
-                elif tagg == 'good':
-                    print("ChatBot: " + random.choice(p['responses']))
-                    ok = 1
-                #elif tagg == 'noanswer':
-                #    print(p['tag'])
-                #    print("ChatBot: " + random.choice(p['responses']))
-                    #print('aaaaaaa')
-                    #for j in p['tag']:
-                     #   print(j)
-                      #  break
-                       # if j == tagg:
-                        #    print("ChatBot: " + random.choice(p['responses']))
-                         #   break
+            if gasit == 0:
+                print("ChatBot: " + random.choice(p['responses']))
+                self.userAnswer = input("User: ")
 
 
 if __name__ == '__main__':
     userAnswer = input("User: ")
     chatBot = ChatBot(userAnswer)
     chatBot.check_answer()
-
