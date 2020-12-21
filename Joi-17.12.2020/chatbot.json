@@ -8,9 +8,17 @@
 	"patterns": ["Bye", "See you later", "Goodbye", "Till next time"],
 	"responses": ["See you !", "Have a nice day", "Bye", "Come back jack"]
 	},
-	{"tag": "noanswer",
+	{"tag": "chatbot_def",
+	"patterns": ["What is a chatbot?", "Definition for chatboot"],
+	"responses" : ["A chatbot is a software application used to conduct an on-line chat conversation via text or text-to-speech, in lieu of providing direct contact with a live human agent. "]
+	},
+	{"tag": "Feelings",
+	"patterns": ["I feel bad, can you show me a dog or a cat?"],
+	"responses" : ["photo with cat", "photo with dog"]
+	},
+    {"tag": "noanswer",
 	"patterns": [],
 	"responses" : ["Sorry, can't understand you", "Please gime me more info", "Not sure i understand"]
 	}
-	]
+  ]
 }

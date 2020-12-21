@@ -1,0 +1,13 @@
+import json
+
+{"chatbot":
+	{"tag": "Salutare",
+	"cuvinte": ["salut", "hey", "ave", "etc..."],
+	"raspunsuri" ["Salut din partea chatbot-ului", "Salut humanoidule", "De ce saluti cand nu stii ce vrie ?", "etc..."],
+	},
+
+	al doilea tag -> "Revedere" -> cu intrebari si raspunsuri
+	al treilea tag -> "fara raspunsuri"
+	al patrulea tag -> "optiuni"
+	al cincilea tag -> "pisici"
+}
