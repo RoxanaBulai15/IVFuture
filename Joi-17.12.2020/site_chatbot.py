@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from chatbot import ChatBot
 
 
 app = Flask(__name__)
@@ -9,4 +10,8 @@ def home():
    
    
 if __name__ == '__main__':
+   userAnswer = input("User: ")
+   chat = ChatBot(userAnswer)
+   chat.printForSiteMethod()
+
    app.run()
