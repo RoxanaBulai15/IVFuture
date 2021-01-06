@@ -3,6 +3,7 @@ import numpy as np
 import time
 import sys
 import os
+from PIL import Image as im
 
 CONFIDENCE = 0.5
 SCORE_THRESHOLD = 0.5
@@ -24,7 +25,7 @@ colors = np.random.randint(0, 255, size=(len(labels), 3), dtype="uint8")
 # load the YOLO network
 net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
 
-path_name = "img.jpg"
+path_name = "image.jpg"
 image = cv2.imread(path_name)
 file_name = os.path.basename(path_name)
 filename, ext = file_name.split(".")
@@ -90,23 +91,47 @@ for i in range(len(boxes)):
     color = [int(c) for c in colors[class_ids[i]]]
 
     rectangle=cv2.rectangle(image, (x, y), (x + w, y + h), color=color, thickness=thickness)
-    text = f"{labels[class_ids[i]]}: {confidences[i]:.2f}"
+    #text = f"{labels[class_ids[i]]}: {confidences[i]:.2f}"
+    print(type(rectangle))
 
-    # calculate text width & height to draw the transparent boxes as background of the text
-    (text_width, text_height) = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, fontScale=font_scale, thickness=thickness)[0]
-    text_offset_x = x
-    text_offset_y = y - 5
 
-    box_coords = ((text_offset_x, text_offset_y+h/2-text_height), (text_offset_x + text_width, text_offset_y + text_height))
-    overlay = image.copy()
-    cv2.rectangle(overlay, box_coords[0], box_coords[1], color=color, thickness=thickness)
-    # add opacity (transparency to the box)
-    image = cv2.addWeighted(overlay, 0.6, image, 0.4, 0)
-    # now put the text (label: confidence %)
+    # Convert to Grayscale Image
+    array = np.reshape(rectangle, (1024, 720))
+    data = im.fromarray(array)
+    img_rectangle=data.save('img_rectangle.png')
+    gray_image = cv2.cvtColor(img_rectangle, cv2.COLOR_BGR2GRAY)
 
-    cv2.putText(image, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36, 255, 12), 2)
 
-    #cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
-       # fontScale=font_scale, color=(0, 0, 0), thickness=thickness)
+    # Canny Edge Detection
+    canny_edge = cv2.Canny(gray_image, 170, 200)
+
+    # Find contours based on Edges
+    contours, new = cv2.findContours(canny_edge.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    contours = sorted(contours, key=cv2.contourArea, reverse=True)[:30]
+
+    # Initialize license Plate contour and x,y coordinates
+    contour_with_license_plate = None
+    license_plate = None
+    x = None
+    y = None
+    w = None
+    h = None
+
+    # Find the contour with 4 potential corners and creat ROI around it
+    for contour in contours:
+        # Find Perimeter of contour and it should be a closed contour
+        perimeter = cv2.arcLength(contour, True)
+        approx = cv2.approxPolyDP(contour, 0.01 * perimeter, True)
+        if len(approx) == 4:  # see whether it is a Rect
+            contour_with_license_plate = approx
+            x, y, w, h = cv2.boundingRect(contour)
+            license_plate = gray_image[y:y + h, x:x + w]
+            break
+
+    # Removing Noise from the detected image
+    license_plate = cv2.bilateralFilter(license_plate, 11, 17, 17)
+
+    cv2.imshow('a', license_plate)
+    cv2.waitKey(0)
 
 cv2.imwrite(filename + "_yolo3." + ext, image)

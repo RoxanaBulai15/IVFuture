@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import chatbot as mymodule
 
 app = Flask(__name__)
-app.static_folder='static'
+#app.static_folder='static'
 
 @app.route('/')
 def home():
@@ -24,5 +24,4 @@ if __name__ == '__main__':
     #get_bot_response(chat)
     #chat.check_answer()
     #chat.printForSiteMethod()
-
     app.run()

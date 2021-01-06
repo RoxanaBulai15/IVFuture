@@ -31,8 +31,10 @@ class ChatBot:
                 print("ChatBot: " + random.choice(p['responses']))
                 self.userAnswer = input("User: ")
 
+    def printForSiteMethod(self):
+        print('Am facut o instanta dintr-un fisier in altul')
 
-if __name__ == '__main__':
-    userAnswer = input("User: ")
-    chatBot = ChatBot(userAnswer)
-    chatBot.check_answer()
+    # if __name__ == '__main__':
+    #     userAnswer = input("User: ")
+    #     chatBot = ChatBot(userAnswer)
+    #     chatBot.check_answer()

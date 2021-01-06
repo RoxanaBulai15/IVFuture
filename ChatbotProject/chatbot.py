@@ -27,6 +27,42 @@ class ChatBot:
                                 print("ChatBot: " + random.choice(p['responses']))
                                 return random.choice(p['responses'])
                                 ok = 1
+                            if tagg == 'games':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
+                            if tagg =='League of Legends':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
+                            if tagg == 'Counter-Strike: Global Offensive':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
+                            if tagg == 'Apex Legends':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
+                            if tagg == 'The Witcher 3':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
+                            if tagg == 'Mafia III':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
+                            if tagg == 'Eve':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
+                            if tagg == 'Dark Souls 3':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
+                            if tagg == 'Red Dead Redemption':
+                                print("ChatBot: " + random.choice(p['responses']))
+                                return random.choice(p['responses'])
+                                self.userAnswer = input("User: ")
                         if gasit == 1:
                             break
             if gasit == 0:
