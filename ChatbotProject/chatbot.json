@@ -50,7 +50,7 @@
 	"responses" : ["The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher.[4] Geralt walks, runs, rolls and dodges, and (for the first time in the series) jumps, climbs and swims.[5][6] He has a variety of weapons, including bombs, a crossbow and two swords (one steel and one silver).[7] The steel sword is used primarily to kill humans while the silver sword is more effective against creatures and monsters.[8] Players can draw out, switch and sheathe their swords at will. There are two modes of melee attack; light attacks are fast but weak, and heavy attacks are slow but strong.[9] Players can block and counter enemy attacks with their swords.[7] Swords have limited endurance and require regular repair.[10] In addition to physical attacks, Geralt has five magical signs at his disposal: Aard, Axii, Igni, Yrden and Quen.[11] Aard prompts Geralt to unleash a telekinetic blast, Axii confuses enemies, Igni burns them, Yrden slows them down and Quen offers players a temporary, protective shield.[12] The signs use stamina, and cannot be used indefinitely.[13] Players can use mutagens to increase Geralt's magic power. Geralt loses health when attacked by enemies, although wearing armour can help reduce health loss. Health is restored with meditation or consumables, such as food and potions.[7] Players occasionally control Ciri, Geralt's adoptive daughter who can teleport short distances."]},
 	{"tag": "noanswer",
 	"patterns": [],
-	"responses" : ["Sorry, can't understand you", "Please gime me more info", "Not sure i understand"]
+	"responses" : ["Sorry, can't understand you. Do you want to search on wikipedia? Yes/No"]
 	}
   ]
 }

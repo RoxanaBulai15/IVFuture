@@ -1,6 +1,8 @@
 import json
 import random
 
+import wikipedia
+
 
 class ChatBot:
     def __init__(self, userAnswer):
@@ -9,71 +11,31 @@ class ChatBot:
             self.data = json.load(json_file)
 
     def check_answer(self):
-        ok = 0
-        while ok == 0:
-            gasit = 0
+
+        while True:
             for p in self.data['chatbot']:
-                tagg = 'noanswer'
                 if p['tag'] != 'noanswer':
                     for i in p['patterns']:
                         if i == self.userAnswer:
-                            gasit = 1
-                            tagg = p['tag']  # greeting or good
-                            if tagg == 'greeting':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg == 'good':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                ok = 1
-                            if tagg == 'games':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg =='League of Legends':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg == 'Counter-Strike: Global Offensive':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg == 'Apex Legends':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg == 'The Witcher 3':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg == 'Mafia III':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg == 'Eve':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg == 'Dark Souls 3':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                            if tagg == 'Red Dead Redemption':
-                                print("ChatBot: " + random.choice(p['responses']))
-                                return random.choice(p['responses'])
-                                self.userAnswer = input("User: ")
-                        if gasit == 1:
-                            break
-            if gasit == 0:
-                print("ChatBot: " + random.choice(p['responses']))
-                return random.choice(p['responses'])
-                self.userAnswer = input("User: ")
+                            return random.choice(p['responses'])
+
+                else:
+                    answer=self.userAnswer
+                    message = "Sorry that I didn't help you, choose another game from the list. "
+                    if self.userAnswer == "Yes":
+                        return wikipedia.summary(answer, sentences=2)
+                    elif self.userAnswer == "No":
+                        print('a')
+                        return message
+                    return random.choice(p['responses'])
 
     def printForSiteMethod(self):
         print('Am facut o instanta dintr-un fisier in altul')
 
-    # if __name__ == '__main__':
-    #     userAnswer = input("User: ")
-    #     chatBot = ChatBot(userAnswer)
-    #     chatBot.check_answer()
+    def wikipediaSearch(self, answer):
+        message = "Sorry that I didn't help you, choose another game from the list. "
+        if self.userAnswer == "Yes":
+            return wikipedia.summary(answer, sentences=2)
+        if self.userAnswer == "No":
+            print('a')
+            return message
