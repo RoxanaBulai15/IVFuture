@@ -1,3 +1,4 @@
+import wikipedia
 from flask import Flask, render_template, request
 import chatbot as mymodule
 
@@ -13,8 +14,14 @@ def home():
 def get_bot_response():
     userAnswer = request.args.get('msg')
     chat = mymodule.ChatBot(userAnswer)
-    #print(str(chat.check_answer()))
+    answer = ' '
+    #if userAnswer!='Yes' and userAnswer!='No':
+    #    message = wikipedia.summary(answer, sentences=2)
     return str(chat.check_answer())
+
+    #return wikipedia.summary(answer, sentences=2)
+    #print(str(chat.check_answer()))
+    #return str(chat.check_answer())
 
 
 if __name__ == '__main__':

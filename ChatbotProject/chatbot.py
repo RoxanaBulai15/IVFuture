@@ -1,7 +1,12 @@
 import pickle
 
+import googletrans
 import nltk
+import wikipedia
 from nltk.stem.lancaster import LancasterStemmer
+from googletrans import Translator
+
+translator = Translator()
 
 stemmer = LancasterStemmer()
 from tensorflow.python.framework import ops
@@ -11,6 +16,8 @@ import tensorflow
 import random
 
 import json
+import langdetect
+
 with open('chatbot.json') as file:
     data = json.load(file)
 # Now our json data will be stored in the variable data.
@@ -129,23 +136,40 @@ class ChatBot:
             self.data = json.load(json_file)
 
     def check_answer(self):
-        #while True:
-        #    for p in self.data['chatbot']:
-        #        if p['tag'] != 'noanswer':
-        #            for i in p['patterns']:
-        #                if i == self.userAnswer:
-        #                    return random.choice(p['responses'])
-        #        else:
-        #            return 'I search on wikipedia the informations for {}'.format(str(self.userAnswer)) + '\r\n' + wikipedia.summary(self.userAnswer, sentences=2)
+
+        while True:
+            for p in self.data['chatbot']:
+                if p['tag'] != 'noanswer':
+                    for i in p['patterns']:
+                        #print(str(langdetect.detect(str(self.userAnswer))))
+                        t = Translator().detect(self.userAnswer)
+                        if t.lang=="ro":
+                            answer=translator.translate(i, src='en', dest='ro').text
+                            print("answer: ", answer)
+                            if answer == self.userAnswer:
+                                return str(translator.translate(random.choice(p['responses']), src='en', dest='ro').text)
+                        else:
+                            if i==self.userAnswer:
+                                return random.choice(p['responses'])
+                else:
+                    t = Translator().detect(self.userAnswer)
+                    if t.lang == "ro":
+                        return 'Am cautat informatii pe wikipedia despre {}'.format(translator.translate(str(self.userAnswer),src='en',dest='ro').text)+'\r\n'+translator.translate(str(wikipedia.summary(self.userAnswer,sentences=2),src='en',dest='ro')).text
+                    return 'I search on wikipedia the informations for {}'.format(str(self.userAnswer)) + '\r\n' + wikipedia.summary(self.userAnswer, sentences=2)
         #if self.userAnswer.lower() == "quit":
         #    break
 
-        results = model.predict([bag_of_words(self.userAnswer, words)])
-        results_index = numpy.argmax(results)
-        tag = labels[results_index]
+        #results = model.predict([bag_of_words(self.userAnswer, words)])
+        #results_index = numpy.argmax(results)
+        #tag = labels[results_index]
 
-        for tg in data["chatbot"]:
-            if tg['tag'] == tag:
-                responses = tg['responses']
+        #for tg in data["chatbot"]:
+        #    if tg['tag'] == tag:
+        #        responses = tg['responses']
 
-        return random.choice(responses)
+        #return random.choice(responses)
+
+    def translate(self):
+        translator=googletrans.Translator()
+        translation = translator.translate(self.userAnswer, src='en', dest='ro')
+        return translation

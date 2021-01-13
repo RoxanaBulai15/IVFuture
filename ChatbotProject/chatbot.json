@@ -1,7 +1,7 @@
 {"chatbot":
   [
 	{"tag": "greeting",
-	"patterns": ["Hi", "Hey", "How are you", "Hola", "Hello"],
+	"patterns": ["Hi", "Hey", "How are you", "Hola", "Hello", "Good morning"],
 	"responses": ["Hello", "Good to see you", "Hi there, how can i help you ? "]
 	},
 	{"tag": "good",
