@@ -1,0 +1,44 @@
+*functions are code on demand
+*variable and constants created in functions "belong" to that function
+*functions can take parameters(arguments) and can return a value
+*functions can be called multiple times( with different arguments)
+*functions can be called "directly" and "indirectly"
+
+! PARAMETERS are these variables which you specify between parentheses
+when defining a function.
+     function sayHiI(name) {}
+     // name is parameter
+
+! ARGUMENTS are the concrete values you pass to a function when calling that function
+      sayHi('Max');
+      // Max is an argument
+
+
+A different way of defining functions:
+
+* function declaration/ function statement
+function multiply(a,b){
+    return a*b;
+} // hoisted to top, can be declared anywhere in the file
+(i.e. also after it's used)
+
+*function expression
+const multiply = function(a,b){
+    return a*b;
+} // hoisted to top, but not initialized/defined, can't be declared
+anywhere in the file(i.e. not after it's used)
+
+
+! ARROW FUNCTIONS
+
+// No arguments/parameters ()=>{}
+// empty pair of parentheses is required
+// exactly one argument/parameter arg => {...} // parantheses can be omitted
+// exactly one expression in function body (a,b) => a+b //curly braces can be omitted, result is returned
+// more than one expression in function body
+    (a,b) => {
+    a*= 2; return a+b;
+    } // curly braces and return statements required
+
+General Syntax:
+    (arg1, arg2) =>{...}
